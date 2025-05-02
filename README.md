@@ -1,0 +1,2 @@
+# NoPlaceNearObsidian
+防止在黑曜石旁边放置方块的客户端mod
