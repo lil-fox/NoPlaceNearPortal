@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "noplacenearportal",
+  "version": "1.0.0",
+  "name": "No Place Near Portal",
+  "description": "防止在下界传送门侧边放置方块的mod",
+  "authors": [
+    "Your Name"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "pack.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "NoPlaceNearPortal.NoPlaceNearPortalMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "minecraft": "~1.21",
+    "java": ">=17",
+    "fabric-api": "*"
+  }
+}
