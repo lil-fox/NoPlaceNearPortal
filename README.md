@@ -15,14 +15,9 @@ A client-side mod that prevents block placement next to obsidian blocks. This mo
 - Visual feedback when attempting to place blocks
 - Client-side only - works in both singleplayer and multiplayer
 
-### Installation
-1. Install [Fabric Loader](https://fabricmc.net/use/) (version 0.14.21 or higher)
-2. Install [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api)
-3. Place the mod file in your `.minecraft/mods` folder
-
 ### Usage
 - The mod is enabled by default when you start the game
-- Press P key (default) to toggle the feature on/off
+- Press V key (default) to toggle the feature on/off
 - A message will appear when you toggle the feature
 - When enabled, you cannot place blocks next to obsidian blocks
 - When disabled, normal block placement is restored
@@ -53,14 +48,9 @@ A client-side mod that prevents block placement next to obsidian blocks. This mo
 - 尝试放置方块时会有提示信息
 - 纯客户端mod - 单人多人皆可用
 
-### 安装方法
-1. 安装 [Fabric Loader](https://fabricmc.net/use/) (版本 0.14.21 或更高)
-2. 安装 [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api)
-3. 将mod文件放入 `.minecraft/mods` 文件夹
-
 ### 使用说明
 - 游戏启动时mod默认开启
-- 按P键（默认）可以切换功能开启/关闭
+- 按V键（默认）可以切换功能开启/关闭
 - 切换功能时会显示提示信息
 - 功能开启时，无法在黑曜石旁边放置方块
 - 功能关闭时，恢复正常的方块放置
