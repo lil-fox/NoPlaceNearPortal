@@ -11,7 +11,7 @@ A client-side mod that prevents block placement next to obsidian blocks. This mo
 - Prevents placing any blocks adjacent to obsidian blocks
 - Works in all four directions (north, south, east, west)
 - Does not affect placement above or below obsidian
-- Toggle feature with a customizable hotkey (default: P key)
+- Toggle feature with a customizable hotkey (default: V key)
 - Visual feedback when attempting to place blocks
 - Client-side only - works in both singleplayer and multiplayer
 
@@ -44,7 +44,7 @@ A client-side mod that prevents block placement next to obsidian blocks. This mo
 - 防止在黑曜石旁边放置任何方块
 - 作用于四个方向（东南西北）
 - 不影响黑曜石上方和下方的方块放置
-- 可通过快捷键开关功能（默认P键）
+- 可通过快捷键开关功能（默认V键）
 - 尝试放置方块时会有提示信息
 - 纯客户端mod - 单人多人皆可用
 
