@@ -49,7 +49,7 @@ public class NoPlaceNearPortalMod implements ClientModInitializer {
         toggleBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
             "key.noplacenearportal.toggle",
             InputUtil.Type.KEYSYM,
-            GLFW.GLFW_KEY_V, // 默认使用V键
+            -1, // 默认使用V键
             "category.noplacenearportal.general"
         ));
 
@@ -58,7 +58,7 @@ public class NoPlaceNearPortalMod implements ClientModInitializer {
             if (toggleBinding.wasPressed()) {
                 isEnabled = !isEnabled;
                 if (client.player != null) {
-                    client.player.sendMessage(Text.literal("传送门周围方块限制: " + (isEnabled ? "开启" : "关闭")), true);
+                    client.player.sendMessage(Text.translatable(isEnabled ? "noplacenearportal.switch.enabled" : "noplacenearportal.switch.disabled"), true);
                 }
             }
         });
@@ -87,7 +87,7 @@ public class NoPlaceNearPortalMod implements ClientModInitializer {
                     if (checkState.getBlock() == Blocks.NETHER_PORTAL) {
                         if (isPortalSide(placementPos, checkPos, checkState)) {
                             if (player.getWorld().isClient) {
-                                player.sendMessage(Text.literal("无法在传送门侧边放置方块！"), true);
+                                player.sendMessage(Text.translatable("noplacenearportal.message"), true);
                             }
                             return ActionResult.FAIL;
                         }
