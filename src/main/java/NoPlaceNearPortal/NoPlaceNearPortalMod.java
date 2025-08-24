@@ -1,6 +1,6 @@
 package NoPlaceNearPortal;
 
-import net.fabricmc.api.ModInitializer;
+import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
@@ -14,7 +14,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import org.lwjgl.glfw.GLFW;
 
-public class NoPlaceNearPortalMod implements ModInitializer {
+public class NoPlaceNearPortalMod implements ClientModInitializer {
     private static boolean isEnabled = true;
     private KeyBinding toggleBinding;
 
@@ -44,7 +44,7 @@ public class NoPlaceNearPortalMod implements ModInitializer {
     }
 
     @Override
-    public void onInitialize() {
+    public void onInitializeClient() {
         // 注册快捷键
         toggleBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
             "key.noplacenearportal.toggle",
