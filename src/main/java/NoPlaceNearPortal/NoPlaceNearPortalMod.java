@@ -6,13 +6,17 @@ import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.NetherPortalBlock;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.item.BlockItem;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import org.lwjgl.glfw.GLFW;
+
+import java.util.Arrays;
 
 public class NoPlaceNearPortalMod implements ClientModInitializer {
     private static boolean isEnabled = true;
@@ -34,10 +38,19 @@ public class NoPlaceNearPortalMod implements ClientModInitializer {
         // 如果是X轴传送门（东西向），阻止南北方向
         // 如果是Z轴传送门（南北向），阻止东西方向
         if (dy == 0) {
-            if ((Math.abs(dx) == 0 && Math.abs(dz) == 1) ||
-                (Math.abs(dx) == 1 && Math.abs(dz) == 0)) {
-                return true;
-            }
+
+            return Arrays.equals(portalState.get(NetherPortalBlock.AXIS).getDirections(), Direction.Axis.X.getDirections()) ?
+                    Math.abs(dx) == 1 && dz == 0 : Math.abs(dz) == 1 && dx == 0;
+//            if(Arrays.equals(portalState.get(NetherPortalBlock.AXIS).getDirections(), Direction.Axis.X.getDirections())) {
+//                // X轴传送门，阻止南北方向
+//                return Math.abs(dx) == 1 && dz == 0;
+//
+//            }
+//            if(Arrays.equals(portalState.get(NetherPortalBlock.AXIS).getDirections(), Direction.Axis.Z.getDirections())) {
+//                // X轴传送门，阻止南北方向
+//                return Math.abs(dz) == 1 && dx == 0;
+//
+//            }
         }
 
         return false;
