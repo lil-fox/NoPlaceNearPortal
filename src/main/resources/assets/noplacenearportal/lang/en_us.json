@@ -1,6 +1,6 @@
 {
   "key.noplacenearportal.toggle": "Enable/Disable Restriction",
-  "category.noplacenearportal.general": "No Place Near Portal",
+  "key.category.noplacenearportal.general": "No Place Near Portal",
   "noplacenearportal.message": "Portal Block Saved!",
   "noplacenearportal.switch.enabled": "Portal protection: on",
   "noplacenearportal.switch.disabled": "Portal protection: off"

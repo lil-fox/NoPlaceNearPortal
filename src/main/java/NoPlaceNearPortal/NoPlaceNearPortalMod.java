@@ -12,6 +12,7 @@ import net.minecraft.client.util.InputUtil;
 import net.minecraft.item.BlockItem;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 
@@ -53,7 +54,7 @@ public class NoPlaceNearPortalMod implements ClientModInitializer {
             "key.noplacenearportal.toggle",
             InputUtil.Type.KEYSYM,
             -1, // 默认使用V键
-            "category.noplacenearportal.general"
+            new KeyBinding.Category(Identifier.of("noplacenearportal", "general"))
         ));
 
         // 注册快捷键检查事件
@@ -89,7 +90,7 @@ public class NoPlaceNearPortalMod implements ClientModInitializer {
                     BlockState checkState = world.getBlockState(checkPos);
                     if (checkState.getBlock() == Blocks.NETHER_PORTAL) {
                         if (isPortalSide(placementPos, checkPos, checkState)) {
-                            if (player.getWorld().isClient) {
+                            if (player.getEntityWorld().isClient()) {
                                 player.sendMessage(Text.translatable("noplacenearportal.message"), true);
                             }
                             return ActionResult.FAIL;
