@@ -23,8 +23,8 @@ A client-side mod that prevents block placement next to nether portal blocks. Th
 - When disabled, normal block placement is restored
 
 ### Requirements
-- Minecraft 1.21
-- Fabric Loader ≥ 0.14.21
+- Minecraft 1.21.10
+- Fabric Loader ≥ 0.18.0
 - Fabric API
 - Java 17 or higher
 
@@ -56,8 +56,8 @@ A client-side mod that prevents block placement next to nether portal blocks. Th
 - 功能关闭时，恢复正常的方块放置
 
 ### 运行要求
-- Minecraft 1.21
-- Fabric Loader ≥ 0.14.21
+- Minecraft 1.21.10
+- Fabric Loader ≥ 0.18.0
 - Fabric API
 - Java 17 或更高版本
 
